@@ -1,0 +1,21 @@
+Source: rvrrpd
+Section: net
+Priority: optional
+Maintainer: Valters Jansons <valter.jansons@gmail.com>
+Build-Depends: debhelper-compat (= 12), cargo,
+	libnl-3-dev, libnl-route-3-dev, libssl-dev,
+	help2man
+Standards-Version: 4.5.0
+Homepage: https://rvrrpd.readthedocs.io/en/latest/
+Vcs-Browser: https://github.com/e3prom/rVRRPd
+Vcs-Git: https://github.com/e3prom/rVRRPd.git
+Rules-Requires-Root: no
+
+Package: rvrrpd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libnl-3-200, libnl-route-3-200, libssl1.1
+Description: Lightweight, fast, and highly secure VRRP daemon
+ rVRRPd is a fast, multi-platform and standard-compliant VRRPv2
+ implementation written in Rust, a modern programming language
+ known for its portability, memory-safety and speed.
